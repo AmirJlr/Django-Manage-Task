@@ -8,10 +8,12 @@
 
 
 
-## celery in django : 
+## Celery in django : 
 <a href='https://docs.celeryq.dev/en/stable/'>Celery - Distributed Task Queue</a>
 
 #### Read More :
-<img src='celery_512.webp' width='50%' />
+<img src='celery_512.webp' width='20%' />
 
+## Celery Periodic Tasks¶
+https://docs.celeryq.dev/en/stable/userguide/periodic-tasks.html
 
