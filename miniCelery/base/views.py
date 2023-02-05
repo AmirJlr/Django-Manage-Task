@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from .forms import InviteForm
+from .tasks import send_invite_email
 # Create your views here.
 
 def form_view(request):
@@ -11,6 +12,7 @@ def form_view(request):
         form = InviteForm(request.POST)
 
         if form.is_valid():
+            send_invite_email.delay()
             return render(request, 'base/success.html')
 
         else:
