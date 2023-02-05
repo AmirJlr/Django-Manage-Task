@@ -8,7 +8,13 @@ def form_view(request):
         form = InviteForm()
 
     elif request.method == 'POST':
-        form = request.POST
+        form = InviteForm(request.POST)
+
+        if form.is_valid():
+            return render(request, 'base/success.html')
+
+        else:
+            return render(request, 'base/form.html', {'form':form})
 
 
-    return render(request, 'base/form.html', {'form':form})
+    
